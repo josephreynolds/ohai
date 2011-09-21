@@ -23,7 +23,7 @@ virtualization Mash.new
 # if it is possible to detect paravirt vs hardware virt, it should be put in
 # virtualization[:mechanism]
 if File.exists?("/proc/xen")
-  if File.exists?("/dev/xen/evtchn") 
+  if File.exists?("/dev/xen/evtchn")
     virtualization[:system] = "xen"
     virtualization[:role] = "host"
   else
